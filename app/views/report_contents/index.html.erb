@@ -1,0 +1,27 @@
+<h1>Listing report_contents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @report_contents.each do |report_content| %>
+      <tr>
+        <td><%= report_content.content %></td>
+        <td><%= link_to 'Show', report_content %></td>
+        <td><%= link_to 'Edit', edit_report_content_path(report_content) %></td>
+        <td><%= link_to 'Destroy', report_content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Report content', new_report_content_path %>

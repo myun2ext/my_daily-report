@@ -1,0 +1,2 @@
+module ReportContentsHelper
+end
