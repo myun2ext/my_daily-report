@@ -1,4 +1,6 @@
 DailyReport::Application.routes.draw do
+  resources :work_types
+
   resources :report_dates
 
   resources :report_contents
