@@ -1,0 +1,27 @@
+<h1>Listing report_dates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @report_dates.each do |report_date| %>
+      <tr>
+        <td><%= report_date.date %></td>
+        <td><%= link_to 'Show', report_date %></td>
+        <td><%= link_to 'Edit', edit_report_date_path(report_date) %></td>
+        <td><%= link_to 'Destroy', report_date, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Report date', new_report_date_path %>
